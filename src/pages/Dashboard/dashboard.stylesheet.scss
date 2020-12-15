@@ -1,0 +1,57 @@
+@import "../../global";
+.main-container {
+  background-color: $dashboard-background;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+  .title-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    .title {
+      color: $dls-primary;
+
+    }
+    .icon-section {
+      .download-icon {
+        color: $title-color;
+        padding: 5px;
+        background-color: $dls-background;
+        border: 1px solid $dls-secondary5;
+        border-radius: 20%;
+        height: 30px;
+        width: 30px;
+      }
+      .attach-icon {
+        color: $title-color;
+        margin-left: 20px;
+        padding: 5px;
+        background-color: $dls-background;
+        border: 1px solid $dls-secondary5;
+        border-radius: 20%;
+        height: 30px;
+        width: 30px;
+      }
+    }
+
+  }
+  .button-section {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+    border-radius: 30%;
+    cursor: grab;
+    .pdf-button {
+      background-color: $header-background-dark;
+      border: 1px solid $header-background-dark;
+      padding: 5px;
+      border-radius: 5%;
+      color: $dls-background;
+      .like-icon {
+        padding-right: 5px;
+      }
+    }
+  }
+}
