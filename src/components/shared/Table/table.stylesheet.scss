@@ -1,0 +1,53 @@
+@import "../../../global";
+.table-main-container {
+  width: 100%;
+}
+.data-table{
+  width: 100%;
+  table{
+    border-spacing: 0px;
+
+    width: 100%;
+    padding: 50px 30px 30px 30px;
+    background-color: $dls-background;
+    thead{
+      background-color: $dls-background
+    }
+    th{
+      background-color: $table-header;
+      color: $dls-primary;
+      padding: 20px;
+      .ant-table-column-sorters{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        color: $dls-accent3;
+        font-weight: normal;
+        .ant-table-column-sorter-inner{
+          color: $dls-accent4;
+        }
+        .ant-table-column-sorter{
+          padding-right: 10px;
+        }
+      }
+    }
+    td{
+      padding: 20px;
+      align-items: center;
+    }
+    tbody{
+      color: #000000;
+      tr {
+        &:nth-child(odd){
+          background-color: $table-row-color1;
+        }
+        &:nth-child(even){
+          background-color: $table-row-color2;
+        }
+      }
+    }
+  }
+}
+.clickRowStyl {
+  background-color: #a7d3b2 !important;
+}

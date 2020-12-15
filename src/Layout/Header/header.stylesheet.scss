@@ -1,0 +1,32 @@
+@import "../../global";
+.mainContainer {
+  background-color: $header-background;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .search-section{
+
+  }
+  .setting-section{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $header-background-dark;
+    .plus-icon-wrapper {
+      border-radius: 50%;
+      border: 2px solid $dls-background;
+      align-items: center;
+      display: flex;
+      .plus-icon {
+        width: 10px;
+        height: 10px;
+        color: $dls-background;
+        margin: 2px;
+      }
+    }
+
+  }
+}

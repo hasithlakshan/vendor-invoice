@@ -1,0 +1,57 @@
+@import "../../global";
+.add-party-main-container{
+  background-color: $dashboard-background;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  .selected-party-container {
+    padding: 50px 30px 30px 30px;
+    background-color: $dls-background;
+    margin: 20px;
+    height: fit-content;
+    border-radius: 15px;
+    width: 70%;
+    align-self: center;
+    .add-party-selected-container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+}
+.calender-component{
+  border-radius: 15px !important;
+  background-color: #d9d9d9 !important;
+}
+.calender-wrapper {
+  display: flex;
+  flex-direction: column;
+  .error-calender{
+    margin: 3px 0 0 10px;
+    font-weight: 500;
+    font-size: 12px;
+    color: $scarlet;
+    line-height: 1.5715;
+    transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+}
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 60%;
+  align-self: center;
+  margin-top: 30px;
+  .cancel {
+    background-color: $dls-accent1;
+    border-radius: 15px;
+    color: $dls-background;
+  }
+  .save {
+    background-color: $dls-accent1;
+    border-radius: 15px;
+    margin-left: 10px;
+    color: $dls-background;
+  }
+}

@@ -1,0 +1,60 @@
+$dls-secondary1: #747474;
+
+$dls-secondary3: #C6C6C6;
+$dls-secondary4: #E4E4E4;
+
+$dls-accent1: #00524E;
+$dls-accent2: #027D76;
+$dls-accent3: #18A599;
+$dls-accent4: #31DCCD;
+$dls-accent5: #99F1ED;
+$dls-success-small-text: #448C25;
+$dls-success: #68BC44;
+$dls-success-disabled: #3368BC44;
+$dls-warning-small-text: #CC4C32;
+$dls-warning: #FFA724;
+$dls-warning-disabled: #33FFA724;
+$dls-danger-small-text: #AD0A30;
+$dls-danger: #EB1144;
+$dls-danger-disabled: #33EB1144;
+
+//use color
+$dls-primary: #111111;
+$dls-background: #FFFFFF;
+$dls-secondary2: #A9A9A9;
+$dls-secondary5: #F1F1F1;
+
+$dashboard-background: #E4E4E4; //#fbf8fb;
+$header-background: $dls-accent2; //#41986e;
+$header-background-dark: $dls-accent1; //#398862;
+$title-color: #828290;
+$table-header: #fcf9ff;
+$table-row-color1: #ffffff;
+$table-row-color2: #fefbfd;
+$sidebar-background: #daeae3;
+
+$scarlet: #d0021b;
+$dusty-teal: #548c8f;
+$cta-secondary-hover: #EBEEF3;
+$cta-disabled-text: #AFBCD2;
+$font-normal: sans-serif;
+$text-colour: #201F21;
+$font-medium: sans-serif;
+$cta-background-secondary: #CBEFEA !default;
+.form-group{
+  margin-bottom: 1rem
+}
+// Reusable Classes
+.labelText {
+  color: $text-colour;
+  display: block;
+  font-family: $font-medium;
+  font-size: 14px;
+  font-weight: 500;
+  height: 19px;
+  margin-bottom: 5px;
+
+  &::selection {
+    background: $cta-background-secondary;
+  }
+}

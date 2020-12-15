@@ -1,0 +1,95 @@
+@import "../../../global";
+
+.wrapper {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+    //background-color: #f3f5f8;
+    // padding: 0 15px;
+    //width: 100%;
+    margin-right: 50px;
+
+    &.disabled {
+        background-color: $cta-secondary-hover;
+        color: $cta-disabled-text;
+        cursor: default;
+
+        label {
+            @extend .labelText;
+            color: $cta-disabled-text;
+            margin-bottom: 0;
+        }
+    }
+
+    label {
+        @extend .labelText;
+        margin-bottom: 0;
+    }
+
+    .toggle {
+        display: flex;
+    }
+
+    .uncheckedChild {
+        position: relative;
+        right: 0;
+        font-family: $font-normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: $dls-danger-small-text;
+
+        &.active {
+            font-weight: bold;
+        }
+    }
+    .checkedChild {
+        position: relative;
+        right: 0;
+        font-family: $font-normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: $dls-accent1;
+
+        &.active {
+            font-weight: bold;
+        }
+    }
+
+    .toggleComponent {
+        font-size: 2rem;
+        color: #171717;
+        width: 40px;
+        height: 20px;
+        background: $dls-danger-small-text;
+        border: 1px solid #555;
+        position: relative;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 0 10px;
+
+        &.active {
+            background-color: $dls-accent1;
+            border: 1px solid #8dbdae;
+
+        .toggleButton {
+            right: 0px;
+        }
+    }
+
+    .toggleButton {
+        position: absolute;
+        top: 0px;
+        right: 50%;
+        height: 20px;
+        width: 20px;
+        background: #dfdfdf;
+        box-shadow: 0 0 5px #555;
+        border-radius: 50%;
+        transition: right 0.2s;
+        }
+
+    }
+
+}
+
