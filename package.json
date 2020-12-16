@@ -32,7 +32,8 @@
     "moment": "2.23.0",
     "js-cookie": "2.2.1",
     "axios": "0.19.2",
-    "base64-url": "2.3.3"
+    "base64-url": "2.3.3",
+    "express": "4.16.4"
   },
   "devDependencies": {
     "redux-devtools": "3.5.0"

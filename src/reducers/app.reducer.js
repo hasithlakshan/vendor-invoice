@@ -1,6 +1,6 @@
 import { appRoutAction } from "../actions"
 const initialState = {
-    path: "/dashboard",
+    path: "/",
     selectedTab: null
 }
 const appRoute = (state = initialState, action) => {
