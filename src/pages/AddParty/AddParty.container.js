@@ -3,6 +3,7 @@ import AddPartyView from "./AddParty.view"
 import validator from "../../utils/validator"
 import { addParty } from "./addParty.Action"
 import { connect } from "react-redux"
+import { addRedirectPath } from "../../actions/appRoutAction"
 
 class AddParty extends PureComponent{
     constructor(props) {
@@ -128,7 +129,7 @@ class AddParty extends PureComponent{
     }
     handleOnSubmit = () => {
         const { fields } = this.state
-        const { addParty } = this.props
+        const { addParty, addRedirectPath } = this.props
         const isValidated = this._validate()
         if(isValidated){
             const fieldData = Object.keys(fields)
@@ -144,7 +145,7 @@ class AddParty extends PureComponent{
             } = fieldData
             const data = { part, category, particulars, date, credit: amountType ? amount : 0, debit: amountType ? 0 : amount }
             addParty(data)
-            this.cancel()
+            addRedirectPath("/dashboard", "dashboard")
         }
     }
 
@@ -189,6 +190,7 @@ const mapStateToProps = ({}) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
+    addRedirectPath: (path, selectedTab) => dispatch(addRedirectPath(path, selectedTab)),
     addParty: (party) => dispatch(addParty(party))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(AddParty)

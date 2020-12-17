@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react"
 import { connect } from "react-redux"
 import SideBarView from "./SideBar.view"
-import { addRedirectPath } from "../../actions/appRoutAction"
+import { addRedirectPath, wrapSideBar } from "../../actions/appRoutAction"
 import {
     Redirect
 } from "react-router-dom";
@@ -18,11 +18,18 @@ class SideBar extends PureComponent{
 
     }
 
+    sideBarWrap = () => {
+        const { isWrapSideBar, wrapSideBar } = this.props
+        wrapSideBar(!isWrapSideBar)
+    }
+
     get generateProps(){
-        const { selectedTab } = this.props
+        const { selectedTab, isWrapSideBar } = this.props
         return {
             selectedTab: selectedTab,
-            onClick: this.onClick
+            onClick: this.onClick,
+            sideBarWrap: this.sideBarWrap,
+            isWrapSideBar
         }
 
     }
@@ -40,9 +47,11 @@ class SideBar extends PureComponent{
 }
 const mapStateToProps = ({ appRoute }) => ({
     path: appRoute.path,
-    selectedTab: appRoute.selectedTab
+    selectedTab: appRoute.selectedTab,
+    isWrapSideBar: appRoute.isWrapSideBar
 })
 const mapDispatchToProps = (dispatch) => ({
-    addRedirectPath: (path, selectedTab) => dispatch(addRedirectPath(path, selectedTab))
+    addRedirectPath: (path, selectedTab) => dispatch(addRedirectPath(path, selectedTab)),
+    wrapSideBar: (isWrapSideBar) => dispatch(wrapSideBar(isWrapSideBar))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(SideBar)

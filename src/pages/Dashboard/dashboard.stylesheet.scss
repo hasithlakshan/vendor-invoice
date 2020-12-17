@@ -10,6 +10,9 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    @media print {
+      display: none;
+    }
     .title {
       color: $dls-primary;
 
@@ -37,12 +40,20 @@
     }
 
   }
+  .tabel {
+    @media print {
+      display: block;
+    }
+  }
   .button-section {
     display: flex;
     justify-content: flex-end;
     padding: 30px;
     border-radius: 30%;
     cursor: grab;
+    @media print {
+      display: none;
+    }
     .pdf-button {
       background-color: $header-background-dark;
       border: 1px solid $header-background-dark;
